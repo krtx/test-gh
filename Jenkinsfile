@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage("checkout") {
       steps {
-        step {
+        script {
           commit_id = checkout(scm).COMMIT_ID
           echo "commit_id: ${commit_id}"
         }
