@@ -8,6 +8,7 @@ pipeline {
         script {
           commit_id = checkout(scm).COMMIT_ID
           echo "commit_id: ${commit_id}"
+          echo "checkout: ${checkout(scm)}"
         }
       }
     }
